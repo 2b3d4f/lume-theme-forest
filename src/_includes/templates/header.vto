@@ -1,0 +1,17 @@
+<div>
+  <div class="text-4xl text-center font-serif font-bold">
+    <a href="/"><strong>{{ metas.site }}</strong></a>
+  </div>
+</div>
+<div class="mt-2">
+  <ul class="flex flex-wrap justify-center border-t">
+    {{ for menu of search.pages("menu.visible=true", "menu.order=asc") }}
+      <li>
+        <a href="{{ menu.url }}" class="inline-block py-2 px-4">{{
+          menu.title
+        }}</a>
+      </li>
+    {{ /for }}
+  </ul>
+  <div class="h-1 border-y"></div>
+</div>

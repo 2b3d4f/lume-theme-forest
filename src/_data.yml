@@ -1,0 +1,12 @@
+templateEngine: [vto, md]
+layout: layouts/single.vto
+
+lang: en
+copyright:
+  name: Forest Theme
+  year: "2025"
+
+metas:
+  site: My Blog
+  lang: "=lang"
+  title: "=title"

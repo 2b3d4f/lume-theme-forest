@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang='{{ it.lang || "en" }}'>
+  <head>
+    {{ include "templates/head.vto" }}
+  </head>
+  <body class="min-h-screen flex flex-col p-4 gap-8 *:w-full *:mx-auto">
+    <header>
+      {{ include "templates/header.vto" }}
+    </header>
+    <main class="grow px-4">
+      {{ content }}
+    </main>
+    <footer>
+      {{ include "templates/footer.vto" }}
+    </footer>
+  </body>
+</html>

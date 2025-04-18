@@ -1,0 +1,24 @@
+{{ import { getFirstParagraph } from "utils/getFirstParagraph.vto" }}
+<article class="flex flex-col not-prose">
+  <h2 class="text-lg font-serif font-bold">{{ page.title }}</h2>
+  {{ if page.enable_date }}
+    <div class="text-sm">
+      <time datetime='{{ page.date |> date("ATOM") }}'>{{
+        page.date
+        |> date("PPP")
+      }}</time>
+    </div>
+  {{ /if }}
+  {{ if (page.generate_summary || page.summary ) }}
+    <div class="font-serif text-neutral-500 prose prose-sm mt-2 *:line-clamp-3 max-w-none">
+      {{ if page.summary }}
+        {{ echo page.summary |> md }}
+      {{ else }}
+        {{ echo getFirstParagraph(page.content) |> md }}
+      {{ /if }}
+    </div>
+  {{ /if }}
+  {{ if continueLabel }}
+    <div class="underline text-sm font-serif mt-2">Continue reading →</div>
+  {{ /if }}
+</article>
