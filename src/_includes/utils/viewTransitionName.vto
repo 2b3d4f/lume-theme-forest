@@ -1,0 +1,9 @@
+{{ export function viewTransitionName(url) }}
+  {{ set trimmedUrl = it.url |> replace(/^\/+|\/+$/g, "") }}
+  {{ if (trimmedUrl === "" || trimmedUrl === "/") }}
+    {{ set trimmedUrl = "root" }}
+  {{ /if }}
+  {{ set urlSegments = trimmedUrl |> split('/') }}
+  {{> const vt_name = `vt-${urlSegments[urlSegments.length - 1]}` }}
+  {{- vt_name -}}
+{{ /export }}

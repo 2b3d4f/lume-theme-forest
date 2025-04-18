@@ -1,0 +1,23 @@
+{{# Outputs the first paragraph of the text in markdown format, excluding headings, etc. #}}
+{{ export function getFirstParagraph(markdown) }}
+  {{ set normalized = markdown |> replace(/\r\n/g, '\n') }}
+  {{ set blocks = normalized |> split(/\n{2,}/) }}
+  {{ for block of blocks }}
+    {{ set text = block |> trim() }}
+    {{ if !text }}
+      {{> continue }}
+    {{ /if }}
+    {{> const firstLine = text.split('\n')[0] }}
+    {{> const isHeading     = /^#{1,6}\s+/.test(firstLine) }}
+    {{> const isSetext      = /^[=-]{2,}$/.test(firstLine) }}
+    {{> const isBlockquote  = /^>\s+/.test(firstLine) }}
+    {{> const isList        = /^([-+*]|\d+\.)\s+/.test(firstLine) }}
+    {{> const isCodeFence   = /^```/.test(firstLine) }}
+    {{ if (isHeading || isSetext || isBlockquote || isList || isCodeFence) }}
+      {{> continue }}
+    {{ /if }}
+    {{- text -}}
+    {{> break }}
+  {{ /for }}
+  {{ "" }}
+{{ /export }}
