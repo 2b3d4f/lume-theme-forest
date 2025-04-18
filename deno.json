@@ -1,8 +1,8 @@
 {
-  "nodeModulesDir":"auto",
+  "nodeModulesDir": "auto",
   "imports": {
     "@tailwindcss/typography": "npm:@tailwindcss/typography@^0.5.16",
-    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@5d0058e727bcd6439b59249d49a89f0ca33e0932/",
+    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@2f3d7c6b9aa9a1856d7f62cc3ee62ad8a4495a39/",
     "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.8/jsx-runtime.ts",
     "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@2076c5319708e9b99d086ad0b14ef1e7f80972a1/",
     "markdown-it-obsidian-callouts": "npm:markdown-it-obsidian-callouts@^0.3.2"
