@@ -1,9 +1,9 @@
-{{ export function viewTransitionName(url) }}
+{{ export function viewTransitionName(url,{prefix: pre, suffix: suf}) }}
   {{ set trimmedUrl = it.url |> replace(/^\/+|\/+$/g, "") }}
   {{ if (trimmedUrl === "" || trimmedUrl === "/") }}
     {{ set trimmedUrl = "root" }}
   {{ /if }}
   {{ set urlSegments = trimmedUrl |> split('/') }}
-  {{> const vt_name = `vt-${urlSegments[urlSegments.length - 1]}` }}
-  {{- vt_name -}}
+  {{> const vt_name = urlSegments[urlSegments.length - 1] }}
+  {{- "{{if pre}}{{-pre-}}-{{/if}}{{vt_name}}{{if suf}}-{{-suf-}}{{/if}}" -}}
 {{ /export }}
