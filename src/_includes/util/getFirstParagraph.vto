@@ -16,7 +16,7 @@
     {{ if (isHeading || isSetext || isBlockquote || isList || isCodeFence) }}
       {{> continue }}
     {{ /if }}
-    {{ text }}
+    {{- text -}}
     {{> break }}
   {{ /for }}
   {{ "" }}
