@@ -1,10 +1,13 @@
-{{ if it.enable_date }}
-  {{ if it.date }}
-    <div class="text-sm mt-2 text-neutral-500">
+<div class="text-sm mt-2 text-neutral-500 has-[*]:flex has-[*]:flex-wrap has-[*]:*:not-last:after:content-['•'] has-[*]:*:not-last:after:mx-1">
+  {{ if author }}
+    <span>{{ author }}</span>
+  {{ /if }}
+  {{ if it.enable_date }}
+    {{ if it.date }}
       <time datetime='{{ it.date |> date("ATOM") }}'>{{
         it.date
         |> date("HUMAN_DATE")
       }}</time>
-    </div>
+    {{ /if }}
   {{ /if }}
-{{ /if }}
+</div>
