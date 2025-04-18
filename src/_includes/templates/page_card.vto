@@ -1,14 +1,22 @@
 {{ import { getFirstParagraph } from "utils/getFirstParagraph.vto" }}
+
 <article class="flex flex-col not-prose">
   <h2 class="text-lg font-serif font-bold">{{ page.title }}</h2>
-  {{ if page.enable_date }}
-    <div class="text-sm">
-      <time datetime='{{ page.date |> date("ATOM") }}'>{{
-        page.date
-        |> date("HUMAN_DATE")
-      }}</time>
-    </div>
-  {{ /if }}
+  <div class="text-sm mt-2 has-[*]:flex has-[*]:flex-wrap has-[*]:*:not-last:after:content-['•'] has-[*]:*:not-last:after:mx-1">
+    {{ if page.author }}
+      <p>by {{ page.author }}</p>
+    {{ /if }}
+    {{ if page.enable_date }}
+      {{ if page.date }}
+        <div>
+          <time datetime='{{ page.date |> date("ATOM") }}'>{{
+            page.date
+            |> date("HUMAN_DATE")
+          }}</time>
+        </div>
+      {{ /if }}
+    {{ /if }}
+  </div>
   {{ if (page.generate_summary || page.summary ) }}
     <div class="font-serif text-neutral-500 prose prose-sm mt-2 *:line-clamp-3 max-w-none">
       {{ if page.summary }}
