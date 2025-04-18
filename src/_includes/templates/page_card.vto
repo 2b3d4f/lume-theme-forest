@@ -1,7 +1,7 @@
 {{ import { getFirstParagraph } from "utils/getFirstParagraph.vto" }}
 
 <article class="flex flex-col not-prose">
-  <h2 class="text-lg font-serif font-bold">{{ page.title }}</h2>
+  <h2 class="text-lg font-serif font-bold text-neutral-900">{{ page.title }}</h2>
   <div class="text-sm mt-2 has-[*]:flex has-[*]:flex-wrap has-[*]:*:not-last:after:content-['•'] has-[*]:*:not-last:after:mx-1">
     {{ if page.author }}
       <p>by {{ page.author }}</p>
