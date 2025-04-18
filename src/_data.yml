@@ -1,4 +1,3 @@
-templateEngine: [vto, md]
 layout: layouts/single.vto
 
 lang: en

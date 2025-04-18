@@ -1,6 +1,7 @@
 ---
 title: Components
-summary: Useful components available in Markdown.
+summary: Useful components available in Theme.
+templateEngine: [vto, md]
 ---
 
 ## `page(query, continueLabel)`

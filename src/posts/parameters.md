@@ -1,6 +1,7 @@
 ---
 title: Parameters
 summary: Parameters available in `_data.yml` and front matter.
+templateEngine: [vto, md]
 ---
 
 ## `summary`
