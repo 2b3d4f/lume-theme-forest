@@ -5,27 +5,8 @@
       <h2 class="text-3xl font-serif font-bold italic">
         {{ it.title }}
       </h2>
-      {{ if it.enable_date }}
-        <div class="text-sm mt-2 text-neutral-500">
-          <time datetime='{{ it.date |> date("ATOM") }}'>{{
-            it.date
-            |> date("HUMAN_DATE")
-          }}</time>
-        </div>
-      {{ /if }}
-      {{ if ( it.summary ) }}
-        <div class="mt-8">
-          <div>
-            <div class="border-t w-2/3 mx-auto"></div>
-          </div>
-          <div class="prose prose-neutral font-serif my-4 px-4 text-center max-w-none">
-            {{ it.summary |> md }}
-          </div>
-          <div>
-            <div class="border-t w-2/3  mx-auto"></div>
-          </div>
-        </div>
-      {{ /if }}
+      {{ include "templates/page_details/date.vto" }}
+      {{ include "templates/page_details/summary.vto" }}
     </header>
     {{# Article Content #}}
     <div class="prose prose-neutral prose-headings:font-serif max-w-none mt-8">

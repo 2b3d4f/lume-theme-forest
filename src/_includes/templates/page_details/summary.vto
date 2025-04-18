@@ -1,0 +1,13 @@
+{{ if ( it.summary ) }}
+  <div class="mt-8">
+    <div>
+      <div class="border-t w-2/3 mx-auto"></div>
+    </div>
+    <div class="prose prose-neutral font-serif my-4 px-4 text-center max-w-none">
+      {{ it.summary |> md }}
+    </div>
+    <div>
+      <div class="border-t w-2/3  mx-auto"></div>
+    </div>
+  </div>
+{{ /if }}
