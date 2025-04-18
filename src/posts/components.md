@@ -6,7 +6,7 @@ templateEngine: [vto, md]
 
 ## `page(query)`
 
-Search and display a single page. See also [this document](https://lume.land/plugins/search/).
+Search and display a single page. See also [this document](https://lume.land/plugins/search/#search-one-page).
 
 ```vento
 {{ echo }}
@@ -18,7 +18,7 @@ Search and display a single page. See also [this document](https://lume.land/plu
 
 ## `pages(query, sort, limit)`
 
-Search and display multiple pages. See also [this document](https://lume.land/plugins/search/).
+Search and display multiple pages. See also [this document](https://lume.land/plugins/search/#search-pages).
 
 ```vento
 {{ echo }}
