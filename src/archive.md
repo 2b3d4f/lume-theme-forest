@@ -1,5 +1,5 @@
 ---
-title: Posts
+title: Archive
 menu:
   visible: true
 ---
