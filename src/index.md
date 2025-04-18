@@ -7,6 +7,6 @@ Cupidatat reprehenderit consequat aute eu minim. Dolor excepteur occaecat in occ
 
 ## Recent Posts
 
-{{ comp.pages({ query: "type=post", sort: "date=desc title=asc", limit: 3, continueLabel: true }) }}
+{{ comp.pages({ query: "type=post", sort: "date=desc title=asc", limit: 3 }) }}
 
 [Show more posts](/posts)

@@ -19,19 +19,19 @@ Currently, the auto-generated summary is only used for the `page` or `pages` com
 ### `generate_summary` is not set, `summary` is set
 
 {{ comp box }}
-{{ comp.page({ query: "url=/about/", continueLabel: true }) }}
+{{ comp.page({ query: "url=/about/" }) }}
 {{ /comp }}
 
 ### `generate_summary` is `true`, `summary` is not set
 
 {{ comp box }}
-{{ comp.page({ query: "url=/posts/second-post/", continueLabel: true }) }}
+{{ comp.page({ query: "url=/posts/second-post/" }) }}
 {{ /comp }}
 
 ### `generate_summary` is `false`, `summary` is not set
 
 {{ comp box }}
-{{ comp.page({ query: "url=/posts/third-post/", continueLabel: true }) }}
+{{ comp.page({ query: "url=/posts/third-post/" }) }}
 {{ /comp }}
 
 ---
@@ -43,13 +43,13 @@ Controls the display of dates in other components or pages.
 ### `enable_date` is `true`
 
 {{ comp box }}
-{{ comp.page({ query: "url=/posts/third-post/", continueLabel: true }) }}
+{{ comp.page({ query: "url=/posts/third-post/" }) }}
 {{ /comp }}
 
 ### `enable_date` is `false`
 
 {{ comp box }}
-{{ comp.page({ query: "url=/about/", continueLabel: true }) }}
+{{ comp.page({ query: "url=/about/" }) }}
 {{ /comp }}
 
 ---
