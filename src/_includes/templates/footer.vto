@@ -1,15 +1,16 @@
-<div class="text-center text-sm text-neutral-500 flex flex-wrap justify-center *:not-last:after:content-['•'] *:not-last:after:mx-1">
-  <p>
-    {{ if it.copyright }}
-      <small>
-        &copy;
-        {{ if it.copyright.year }}
-          {{ " " }}{{ it.copyright.year }}
-        {{ /if }}
-        {{ it.copyright.name }}
-      </small>
-    {{ /if }}
-  </p>
+<!-- dprint-ignore-file -->
+<!-- Reason: See comments below. -->
+<div class="text-center text-sm text-neutral-500 flex flex-wrap justify-center">
+{{ if it.copyright }}
+  <p class="not-last:after:content-['•'] not-last:after:mx-1">
+    <small>
+      &copy;
+      {{ if it.copyright.year }}
+        {{ " " }}{{ it.copyright.year }}
+      {{ /if }}
+      {{# When this </p> moves to the next line, a space is inserted after `{{ it.copyright.name }}`. #}}
+      {{ it.copyright.name }}</small></p>
+{{ /if }}
   <p>
     <small>
       Powered by <a
