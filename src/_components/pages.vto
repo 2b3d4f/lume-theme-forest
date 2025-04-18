@@ -1,7 +1,7 @@
 <ul class="not-prose my-5 first:mt-0 last:mb-0">
   {{ for page of search.pages(query, sort, limit) }}
     <li class="border-b last:border-b-0 border-neutral-200 *:py-3 first:*:pt-0 last:*:pb-0">
-      <a href="{{ page.url }}" class="block">
+      <a href="{{ page.url }}" class="block hover:**:[h2]:underline">
         {{- include "templates/page_card.vto" { page: page } -}}
       </a>
     </li>
