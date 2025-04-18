@@ -5,7 +5,7 @@
     <div class="text-sm">
       <time datetime='{{ page.date |> date("ATOM") }}'>{{
         page.date
-        |> date("PPP")
+        |> date("HUMAN_DATE")
       }}</time>
     </div>
   {{ /if }}

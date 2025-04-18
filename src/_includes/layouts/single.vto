@@ -9,7 +9,7 @@
         <div class="text-sm mt-2 text-neutral-500">
           <time datetime='{{ it.date |> date("ATOM") }}'>{{
             it.date
-            |> date("PPP, p O")
+            |> date("HUMAN_DATE")
           }}</time>
         </div>
       {{ /if }}
