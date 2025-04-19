@@ -139,7 +139,7 @@ Aggregates several pieces of content into a single block. Use it to apply consis
 ```vento
 {{ echo }}
 {{ comp group { append: "<append>" } }}
-  <children>
+  <content>
 {{ /comp }}
 {{ /echo }}
 ```
