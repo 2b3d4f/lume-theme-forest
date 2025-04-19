@@ -36,6 +36,8 @@ For a complete list of query operators, refer to the official documentation: [Se
 
 The above displays the page whose canonical URL is `/posts/components/`.
 
+---
+
 ## `pages(query, sort?, limit?)`
 
 Searches for multiple pages and renders each of them in order. Perfect for building lists such as “Latest Posts” or “Related Articles”.
@@ -77,6 +79,8 @@ For additional examples and options, see the official documentation: [Search pag
   sort:  "date=desc title=asc",
   limit: 3
 }) }}
+
+---
 
 ## `box`
 
@@ -123,6 +127,8 @@ Hello, world!
 {{ /comp }}
 
 {{ /comp }}
+
+---
 
 ## `group(append?)`
 
