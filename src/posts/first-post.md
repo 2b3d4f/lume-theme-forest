@@ -4,7 +4,7 @@ author: John Doe
 summary: This page uses a custom summary.
 cover:
   src: /uploads/floral_1.avif
-  caption: Photo by Eva Bronzini
+  caption: Photo by [Eva Bronzini](https://www.pexels.com/photo/fading-floral-painting-on-a-rusting-wall-5987621/)
   alt: Fading Floral Painting on a Rusting Wall
 date: 2025-01-01T00:00:00+09:00
 tags:

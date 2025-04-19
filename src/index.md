@@ -3,7 +3,7 @@ title: Home
 templateEngine: [vto, md]
 cover:
   src: /uploads/building_1.avif
-  caption: Photo by Laura Cleffmann from [Pexels](https://www.pexels.com/photo/balconies-of-modern-building-with-apartments-25954946/)
+  caption: Photo by [Laura Cleffmann](https://www.pexels.com/photo/balconies-of-modern-building-with-apartments-25954946/)
   alt: Balconies of Modern Building with Apartments
 ---
 
