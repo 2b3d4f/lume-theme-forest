@@ -32,9 +32,7 @@ For a complete list of query operators, refer to the official documentation: [Se
 {{ /echo }}
 ```
 
-{{ echo }}
 {{ comp.page({ query: "url=/posts/components/" }) }}
-{{ /echo }}
 
 The above displays the page whose canonical URL is `/posts/components/`.
 
