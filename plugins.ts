@@ -15,7 +15,7 @@ export interface Options {
 
 export const defaults: Options = {
   favicon: {
-    input: "favicon.svg",
+    input: "uploads/favicon.svg",
   },
 };
 
@@ -31,5 +31,6 @@ export default function (userOptions?: Options) {
       .use(favicon(options.favicon))
       .use(tailwindCSS())
       .add("styles.css")
+      .add("uploads")
   };
 }
