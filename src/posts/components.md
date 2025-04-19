@@ -104,7 +104,9 @@ The component takes no arguments. Everything placed between the opening and clos
 
 Hello, world!
 
-{{ comp.page({ query: "url=/posts/components/" }) }}
+{{ comp box }}
+  {{ comp.page({ query: "url=/posts/components/" }) }}
+{{ /comp }}
 
 {{ /comp }}
 {{ /echo }}
@@ -116,7 +118,9 @@ Hello, world!
 
 Hello, world!
 
-{{ comp.page({ query: "url=/posts/components/" }) }}
+{{ comp box }}
+  {{ comp.page({ query: "url=/posts/components/" }) }}
+{{ /comp }}
 
 {{ /comp }}
 
