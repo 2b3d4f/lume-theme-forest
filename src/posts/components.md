@@ -145,7 +145,7 @@ Aggregates several pieces of content into a single block. Use it to apply consis
 ```vento
 {{ echo }}
 {{ comp group {
-  override: "*:my-0 **:[a]:py-3 *:first:**:[a]:pt-0 *:last:**:[a]:pb-0"
+  class: "*:my-0 **:[a]:py-3 *:first:**:[a]:pt-0 *:last:**:[a]:pb-0"
 } }}
   {{ comp.page({ query: "url=/posts/components/" }) }}
   {{ comp.page({ query: "url=/posts/parameters/" }) }}
