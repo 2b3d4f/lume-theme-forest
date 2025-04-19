@@ -24,7 +24,7 @@ Alternative text for the image used on the cover.
 
 ## `author`: `string`
 
-Name of the page's author. For more information, see "[About Author Pages](/post/about-author-pages)".
+Name of the page's author. For more information, see "[About Author Pages](/posts/about-author-pages)".
 
 ---
 
