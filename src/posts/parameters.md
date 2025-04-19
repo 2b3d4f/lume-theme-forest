@@ -4,6 +4,10 @@ summary: Parameters available in `_data.yml` and front matter.
 templateEngine: [vto, md]
 ---
 
+## `author`: `string`
+
+Name of the page's author. For more information, see "[About Author Pages](/post/about-author-pages)".
+
 ## `summary`: `string`
 
 Defines a concise description of the page.

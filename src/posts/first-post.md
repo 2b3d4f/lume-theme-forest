@@ -1,6 +1,6 @@
 ---
 title: Proident enim anim excepteur sunt velit culpa esse id eu
-author: 2b3d4f
+author: John Doe
 summary: This page uses a custom summary.
 date: 2025-01-01T00:00:00+09:00
 tags:

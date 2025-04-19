@@ -1,1 +1,11 @@
-<p>by {{ it.author }}</p>
+{{ set author_search_results = search.pages("type=author")}}
+{{ for author_search_result of author_search_results }}
+  {{ if (author_search_result.author.toLowerCase() === it.author.toLowerCase() ) }}
+    {{ set author_page = author_search_result }}
+  {{ /if }}
+{{ /for }}
+{{ if author_page }}
+  <p>by <a href="{{author_page.url}}" title="{{author_page.title}}" class="underline">{{ it.author }}</a></p>
+{{ else }}
+  <p>by {{ it.author }}</p>
+{{ /if }}
