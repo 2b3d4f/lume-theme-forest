@@ -2,6 +2,11 @@
   <article>
     {{# Article Header #}}
     <header>
+      {{ if it.cover }}
+        {{ if it.cover.src }}
+          {{ include "templates/details/cover.vto" }}
+        {{ /if }}
+      {{ /if }}
       <h2 class="text-3xl font-serif font-bold italic">
         {{ it.title }}
       </h2>
