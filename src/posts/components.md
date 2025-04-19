@@ -4,7 +4,7 @@ summary: Useful components available in Theme.
 templateEngine: [vto, md]
 ---
 
-## `page(query)`
+## page(query)
 
 Search and display a single page. See also [this document](https://lume.land/plugins/search/#search-one-page).
 
@@ -16,7 +16,7 @@ Search and display a single page. See also [this document](https://lume.land/plu
 
 {{ comp.page({ query: "url=/posts/components/" }) }}
 
-## `pages(query, sort, limit)`
+## pages(query, sort, limit)
 
 Search and display multiple pages. See also [this document](https://lume.land/plugins/search/#search-pages).
 
@@ -28,7 +28,7 @@ Search and display multiple pages. See also [this document](https://lume.land/pl
 
 {{ comp.pages({ query: "type=post", sort: "date=desc title=asc", limit: 3 }) }}
 
-## `box`
+## box
 
 Boxes around other content.
 
@@ -41,6 +41,7 @@ Boxes around other content.
 Hello, world!
 
 {{ comp.page({ query: "url=/posts/components/" }) }}
+{{ /comp }}
 {{ /echo }}
 ```
 
