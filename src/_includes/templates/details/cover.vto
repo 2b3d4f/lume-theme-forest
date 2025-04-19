@@ -2,7 +2,7 @@
 <figure class="flex flex-col gap-1 mb-4">
   <img src="{{- it.cover.src -}}" {{ if it.cover.alt }}alt="{{- it.cover.alt -}}"{{ /if }} class="aspect-video object-cover rounded-sm">
   {{ if it.cover.caption }}
-    <figcaption class="text-xs font-serif text-neutral-500 italic text-right pr-1">
+    <figcaption class="text-xs font-serif text-neutral-500 italic text-right pr-1 **:[a]:underline">
       {{ it.cover.caption |> md }}
     </figcaption>
   {{ /if }}
