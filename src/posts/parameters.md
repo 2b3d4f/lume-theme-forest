@@ -4,9 +4,29 @@ summary: Parameters available in `_data.yml` and front matter.
 templateEngine: [vto, md]
 ---
 
+## `cover`: `object`
+
+Set the cover image for the page.
+
+### `cover.src`: `string`
+
+Path of the image to be used for the page cover.
+
+### `cover.caption`: `string`
+
+Caption for the image used on the cover.
+
+### `cover.alt`: `string`
+
+Alternative text for the image used on the cover.
+
+---
+
 ## `author`: `string`
 
 Name of the page's author. For more information, see "[About Author Pages](/post/about-author-pages)".
+
+---
 
 ## `summary`: `string`
 
