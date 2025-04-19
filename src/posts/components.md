@@ -122,7 +122,7 @@ Hello, world!
 
 {{ /comp }}
 
-## `group(class?)`
+## `group(append?)`
 
 Aggregates several pieces of content into a single block. Use it to apply consistent spacing or classes to a collection of child elements.
 
@@ -130,7 +130,7 @@ Aggregates several pieces of content into a single block. Use it to apply consis
 
 ```vento
 {{ echo }}
-{{ comp group { class: "<class>" } }}
+{{ comp group { append: "<append>" } }}
   <children>
 {{ /comp }}
 {{ /echo }}
@@ -138,15 +138,13 @@ Aggregates several pieces of content into a single block. Use it to apply consis
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `class` | `string` | Utility‑class string that is **appended** to each child element (it does *not* replace existing classes). |
+| `append` | `string` | Utility‑class string that is **appended** to each child element (it does *not* replace existing classes). |
 
 ### Example
 
 ```vento
 {{ echo }}
-{{ comp group {
-  class: "*:my-0 **:[a]:py-3 *:first:**:[a]:pt-0 *:last:**:[a]:pb-0"
-} }}
+{{ comp group { append: "*:my-0 **:[a]:py-3 *:first:**:[a]:pt-0 *:last:**:[a]:pb-0" } }}
   {{ comp.page({ query: "url=/posts/components/" }) }}
   {{ comp.page({ query: "url=/posts/parameters/" }) }}
   {{ comp.page({ query: "url=/posts/markdown-guide/" }) }}
@@ -155,7 +153,7 @@ Aggregates several pieces of content into a single block. Use it to apply consis
 ```
 
 {{ comp group {
-  override: "*:my-0 **:[a]:py-3 *:first:**:[a]:pt-0*:last:**:[a]:pb-0"
+  append: "*:my-0 **:[a]:py-3 *:first:**:[a]:pt-0*:last:**:[a]:pb-0"
 } }}
   {{ comp.page({ query: "url=/posts/components/" }) }}
   {{ comp.page({ query: "url=/posts/parameters/" }) }}
