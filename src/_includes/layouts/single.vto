@@ -7,10 +7,10 @@
           {{ include "templates/details/cover.vto" }}
         {{ /if }}
       {{ /if }}
-      <h2 class="text-3xl font-serif font-bold italic">
+      <h2 class="text-3xl font-serif font-bold italic px-4">
         {{ it.title }}
       </h2>
-      <div class="text-sm mt-2 text-neutral-500 has-[*]:flex has-[*]:flex-wrap has-[*]:*:not-last:after:content-['•'] has-[*]:*:not-last:after:mx-1">
+      <div class="text-sm mt-2 px-4 text-neutral-500 has-[*]:flex has-[*]:flex-wrap has-[*]:*:not-last:after:content-['•'] has-[*]:*:not-last:after:mx-1 not-has-[*]:hidden">
         {{ if author }}
           {{ include "templates/details/author.vto" }}
         {{ /if }}
@@ -25,7 +25,7 @@
       {{ /if }}
     </header>
     {{# Article Content #}}
-    <div class="prose prose-neutral prose-headings:font-serif max-w-none mt-8">
+    <div class="prose prose-neutral prose-headings:font-serif max-w-none mt-8 px-4">
       {{ content }}
     </div>
   </article>
