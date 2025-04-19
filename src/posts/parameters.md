@@ -4,56 +4,24 @@ summary: Parameters available in `_data.yml` and front matter.
 templateEngine: [vto, md]
 ---
 
-## `summary`
+## `summary`: `string`
 
-Page Summary. Used for components such as `page.vto` and pages with `generate_summary` set.
+Defines a concise description of the page.
 
-## `generate_summary`
+## 🧪 `generate_summary`: `boolean`
 
-Automatically generates a summary from the page.
+*Automatic summary generation is currently **experimental***.
 
-If `true`, the summary is automatically generated from the first paragraph of the page, excluding headings, block quotations, lists, and code fences. If `summary` is set, that is used first.
-
-Currently, the auto-generated summary is only used for the `page` or `pages` component.
-
-### `generate_summary` is not set, `summary` is set
-
-{{ comp box }}
-{{ comp.page({ query: "url=/about/" }) }}
-{{ /comp }}
-
-### `generate_summary` is `true`, `summary` is not set
-
-{{ comp box }}
-{{ comp.page({ query: "url=/posts/second-post/" }) }}
-{{ /comp }}
-
-### `generate_summary` is `false`, `summary` is not set
-
-{{ comp box }}
-{{ comp.page({ query: "url=/posts/third-post/" }) }}
-{{ /comp }}
+When set to `true`, the theme extracts the first paragraph (excluding headings, blockquotes, lists, and fenced code) and assigns it to `summary`. An explicitly‑written `summary` always takes precedence.
 
 ---
 
-## `enable_date`
+## `enable_date`: `boolean`
 
-Controls the display of dates in other components or pages.
-
-### `enable_date` is `true`
-
-{{ comp box }}
-{{ comp.page({ query: "url=/posts/third-post/" }) }}
-{{ /comp }}
-
-### `enable_date` is `false`
-
-{{ comp box }}
-{{ comp.page({ query: "url=/about/" }) }}
-{{ /comp }}
+Controls whether the page’s date appears in components (e.g. lists, headers) that support date display.
 
 ---
 
-## `menu.visible`
+## `menu.visible`: `boolean`
 
-If `true`, displays a link to the page in the top navigation.
+Determines if the page appears in the top‑level navigation menu.
