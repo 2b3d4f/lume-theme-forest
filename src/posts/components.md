@@ -52,3 +52,38 @@ Hello, world!
 
 {{ comp.page({ query: "url=/posts/components/" }) }}
 {{ /comp }}
+
+## group
+
+Groups and displays multiple contents.
+
+### Syntax
+
+```vento
+{{ echo }}
+{{ comp group <override> }}
+  <children>
+{{ /comp }}
+{{ /echo }}
+```
+
+- `override`: Class to be added
+- `content`: Content to be grouped
+
+### Example
+
+```vento
+{{ echo }}
+{{ comp group { override: "*:my-0 **:[a]:py-3 *:first:**:[a]:pt-0 *:last:**:[a]:pb-0" } }}
+  {{ comp.page({ query: "url=/posts/components/" }) }}
+  {{ comp.page({ query: "url=/posts/parameters/" }) }}
+  {{ comp.page({ query: "url=/posts/markdown-guide/" }) }}
+{{ /comp }}
+{{ /echo }}
+```
+
+{{ comp group { override: "*:my-0 **:[a]:py-3 *:first:**:[a]:pt-0 *:last:**:[a]:pb-0" } }}
+  {{ comp.page({ query: "url=/posts/components/" }) }}
+  {{ comp.page({ query: "url=/posts/parameters/" }) }}
+  {{ comp.page({ query: "url=/posts/markdown-guide/" }) }}
+{{ /comp }}
